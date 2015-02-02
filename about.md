@@ -4,12 +4,12 @@ title: About
 permalink: /about/
 ---
 
-Some information about you!
+一个正在摸索的学生
 
 ### More Information
 
-A place to include any other types of information that you'd like to include about yourself. 
+在哈尔滨，但终究还是会回去的，加油，还有不到两年
 
 ### Contact me
 
-[email@domain.com](mailto:email@domain.com)
+[Gmail Contact Address](mailto:wsxinchina@gmail.com)
