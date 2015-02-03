@@ -6,37 +6,34 @@ kramdown:
   input: GFM
 
 # 作者信息
-author: 
-  name: 闫肃
-  email: suyan0830@gmail.com
-  link: http://yansu.org
-  weibo: http://weibo.com/yansu0711
-  github: http://github.com/suyan
+author:
+  name: Wresle.Wu
+  email: wsxinchina@gmail.com
+  weibo: http://www.weibo.cn/u/2176268011
+  github: http://github.com/wrestle
 
 # 站点信息
-title: 闫肃的博客 
-description: 闫肃的博客
-url: http://yansu.org
-rss_url: /pages/atom.xml
+title: WuShxin's Blog
+description: 维斯特的博客
 
 # gavatar头像及Favicon
-gavatar: http://7u2ho6.com1.z0.glb.clouddn.com/gavatar.png
-favicon: http://7u2ho6.com1.z0.glb.clouddn.com/favicon.ico
+gavata : http://g1.680.com/2014-01/201401140910543498.jpg
+favicon:
 
 # google analytics 设置
 ga:
-  id: UA-54767140-1
-  url: yansu.org
+  id:
+  url:
 
 # disqus 设置
 disqus:
-  shortname: suyan-zh
+  shortname: wrestle
 
 # 主题设置，自动激活某个标签
 active: 技术
 
 # 首页除了最新文章外显示分类
-cates: 
+cates:
   - Python
   - OpenStack
 
@@ -45,5 +42,4 @@ locals:
   tags: 标签
   about: 关于
   newest: 最新文章
-  archive: 归档
   content: 目录
