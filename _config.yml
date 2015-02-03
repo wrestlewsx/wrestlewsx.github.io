@@ -18,12 +18,12 @@ description: 维斯特的博客
 
 # gavatar头像及Favicon
 gavata : http://g1.680.com/2014-01/201401140910543498.jpg
-favicon:
+favicon: /public/img/geek.jpg
 
 # google analytics 设置
 ga:
-  id:
-  url:
+  id: UA-54767140-1
+  url: yansu.org
 
 # disqus 设置
 disqus:
@@ -42,4 +42,5 @@ locals:
   tags: 标签
   about: 关于
   newest: 最新文章
+  archive: 归档
   content: 目录
