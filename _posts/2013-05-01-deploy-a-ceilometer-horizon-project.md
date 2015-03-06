@@ -1,34 +1,33 @@
 ---
 layout: post
-title: 部署一个ceilometer-horizon项目
+title: Python相关
 category: 技术
-tags: OpenStack
-description: 准备做一个OpenStack的监控项目，以前使用的是kanyun，但是由于kanyun放出来的代码是不完全的，不适合持续跟踪，而且不支持F版本，所以就放弃了。OpenStack项目里已经有了Ceilometer项目，作为OpenStack整个项目的监控，只是暂时还不支持horizon展示，所以需要自己写Horizon部分代码，看到有个哥们已经写了，所以就拿来部署一下。
+tags: Python
+description: 介绍Python库以及出现的问题解决
 ---
-## 下载代码
-原来的代码好像安装的时候没有把文件全拷进去，用我修改过的吧
+#  Python 
+## 安装第三方库(Linux::Ubuntu 14.04 LTS)
+   关于一个gui的库 SimpleGUICS2Pygame <br />
+   所有的命令均在 root 权限下执行 <br />
+### 安装前提:
+   1. 使用easy_install 工具 `apt-get install easy_install`
+   2. 安装pip `easy_install pip`
 
-    git clone https://github.com/suyan/ceilometer-horizon.git    
+### 开始安装
+   1. 在 https://pypi.python.org/pypi/SimpleGUICS2Pygame 下载.egg格式的安装包 <br />
+   2. 使用命令 `easy_install name.egg #name.egg 为下载的第三方库的egg包名称`
+   3. 我们这里可以使用 `easy_install *.egg #代表安装所有的egg包,方便快捷,不用输入完整的名字`
+   4. 我们可以通过 `pip freeze` 查看所安装的包
 
-下面是他原来的代码
+### 使用错误
+   1. 当我们 `import simplegui`时,却出现 `...importError: No module named simplegui` <br />
+   此时,我们应该使用这个语句块替换: <br />
+   <pre><code>
+   try:
+       import simplegui 
+   except:
+       import SimpleGUICS2Pygame.simpleGUICS2Pygame as simplegui
+   </code><pre>
+   2. 作者给出的解释是由于内部冲突所以会导致这种现象的产生
 
-    git clone https://github.com/yuanotes/ceilometer-horizon.git
-## 安装必须的包
-他用了导出pdf的python库，所以先得装一下
-
-    easy_install svglib
-    easy_install reportlab
-    ./setup.py install
-
-## 增加horizon部分
-修改horizon/local目录中的local_setting.py
-
-    import sys
-    settings = sys.modules['openstack_dashboard.settings']
-    settings.INSTALLED_APPS += ('ceilometer_horizon.admin',)
-    from openstack_dashboard.dashboards.admin import dashboard
-    dashboard.SystemPanels.panels += ('ceilometer',)
-
-## 重启apache
-
-    service apache2 restart
+   
