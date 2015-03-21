@@ -73,7 +73,7 @@ description: 详细记录C++中难以理解的流操作以及错误解决
    }
    cin >> input; //现在可以继续输入了
    </code></pre>
-   <br> 字符串的输入:get(char*, int) 和 getline(char*, int) </br>
+   <br> 字符串的输入:`get(char*, int)` 和 `getline(char*, int)` </br>
    <br> get读取少于第二个参数减1个或遇见换行符,并将换行符留在流中,getline则将换行符抽取并丢弃</br>
-   <br> get(char*, int, char) 和 getline(char*, int, char) </br>
+   <br> `get(char*, int, char)` 和 `getline(char*, int, char)` </br>
    <br> 第三个参数则是分界符,读取到分界符号时停止读取. </br>
