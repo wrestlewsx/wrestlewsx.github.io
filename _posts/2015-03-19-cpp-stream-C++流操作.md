@@ -5,13 +5,13 @@ category: 技术
 tags: C++
 description: 详细记录C++中难以理解的流操作以及错误解决
 ---
-#  Ｃ++流的使用
+#  C++流的使用
 ## 重定向
    在Linux终端或者Windows命令提示符模式下,使用重定向可以改变输入源和输出源 </br>
    <pre><code> 
-   ~$ program <input.filetype >output.filetype 
+   ~$ program '<'input.filetype >output.filetype #去掉多余的'' 
    </code></pre>
-   <br> 在Ｌinux和Ｕnix下,'>' '<'默认是标准输出和标准输入,'2>'则是标准错误(即std::cerr) 
+   <br> 在Linux和Unix下,'>' '<'默认是标准输出和标准输入,'2>'则是标准错误(即std::cerr) 
 ## 输出流
    <br>1. ostream类提供了 put() 和 write() 方法用来输出 </br>
    <pre><code>
@@ -69,7 +69,7 @@ description: 详细记录C++中难以理解的流操作以及错误解决
    {
      cin.clear();              //重置流状态,但此时还是有残余留在流中
   while(!isspace(cin.get()))//丢弃那些残留在流中妨碍下一次输入的不符合的输入
-     continue;                  //头文件<cctype>
+     continue;                  //头文件 cctype
    }
    cin >> input; //现在可以继续输入了
    </code></pre>
