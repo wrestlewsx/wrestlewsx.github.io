@@ -6,12 +6,14 @@ tags: C++
 description: 详细记录C++中难以理解的流操作以及错误解决
 ---
 #  C++流的使用
+## 每次使用完流,记得要关闭,虽然有时候并不是必须的.
+`streamname.close();`
 ## 重定向
    在Linux终端或者Windows命令提示符模式下,使用重定向可以改变输入源和输出源 </br>
    <pre><code> 
    ~$ program '<'input.filetype >output.filetype #去掉多余的'' 
    </code></pre>
-   <br> 在Linux和Unix下,'>' '<'默认是标准输出和标准输入,'2>'则是标准错误(即std::cerr) 
+   <br> 在Linux和Unix下,'>' '<'默认是标准输出和标准输入,'2>'则是标准错误(即std::cerr)
 ## 输出流
    <br>1. ostream类提供了 put() 和 write() 方法用来输出 </br>
    <pre><code>
